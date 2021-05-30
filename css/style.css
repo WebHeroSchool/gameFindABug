@@ -1,0 +1,123 @@
+body {
+  background: url(/gameFindABug/img/Background.jpg) no-repeat;
+  background-size: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  overflow: hidden;
+  margin: 0 auto;
+  height: 1024px;
+}
+
+.header {
+  /* display: none; */
+  position: relative;
+  width: 833px;
+  height: 394px;
+  left: 103px;
+  top: 65px;
+  margin-bottom: 112px;
+}
+
+.header__title {
+  font-size: 54px;
+  margin-bottom: 8px;
+}
+
+.header__subtitle {
+  font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+.lvl-list {
+  list-style: none;
+  margin: 0;
+}
+
+.lvl-list__item {
+  margin-bottom: 24px;
+}
+
+.simple::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 168px;
+  background: #d62b2e;
+  transform: rotate(45deg);
+}
+
+.lvl-list__item_high {
+  margin-bottom: 112px;
+}
+
+.lvl-list__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  width: 352px;
+  height: 95px;
+  margin-top: 112px;
+  background: #d62b2e;
+  border-radius: 7px;
+  font-size: 32px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-first {
+  position: absolute;
+  left: 1050px;
+  top: 270px;
+  transform: rotate(12deg);
+}
+
+.img-second {
+  position: absolute;
+  left: 1235px;
+  top: 285px;
+  transform: rotate(40deg);
+}
+
+.img {
+  width: 218px;
+  height: 341px;
+}
+
+.simple-lvl,
+.medium-lvl,
+.high-lvl {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.simple-lvl {
+  display: none;
+}
+
+.medium-lvl {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 13vw);
+  grid-template-rows: repeat(2, 20vw);
+  display: none;
+}
+
+.high-lvl {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 13vw);
+  grid-template-rows: repeat(2, 20vw);
+  display: none;
+}
