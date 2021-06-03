@@ -1,15 +1,37 @@
 body {
-  background: url(/gameFindABug/img/Background.jpg) no-repeat;
+  background: url(/img/Background.jpg) no-repeat;
   background-size: 100%;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   overflow: hidden;
   margin: 0 auto;
-  height: 1024px;
+  height: 865px;
+}
+
+/* .wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap-reverse;
+  align-items: center;
+  justify-content: center;
+} */
+
+.flex1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex2,
+.flex3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap-reverse;
 }
 
 .header {
-  /* display: none; */
   position: relative;
   width: 833px;
   height: 394px;
@@ -38,8 +60,8 @@ body {
   margin-bottom: 24px;
 }
 
-.simple::before {
-  content: '';
+.rectangle:before,
+.rectangle {
   position: absolute;
   width: 18px;
   height: 18px;
@@ -75,6 +97,11 @@ body {
   align-items: center;
 }
 
+.img {
+  width: 218px;
+  height: 341px;
+}
+
 .img-first {
   position: absolute;
   left: 1050px;
@@ -89,21 +116,21 @@ body {
   transform: rotate(40deg);
 }
 
-.img {
+.img-lvl1 {
+  background-image: url('/img/Карта\ перевернутая.png');
   width: 218px;
   height: 341px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24px;
 }
 
-.simple-lvl,
-.medium-lvl,
-.high-lvl {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-}
-
-.simple-lvl {
-  display: none;
+.img-lvl2,
+.img-lvl3 {
+  background-image: url('/img/Карта\ перевернутая.png');
+  width: 218px;
+  height: 341px;
+  margin-bottom: 24px;
 }
 
 .medium-lvl {
