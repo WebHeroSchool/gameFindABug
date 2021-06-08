@@ -9,35 +9,39 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__title">Выберите уровень сложности:</h1>
-      <p class="header__subtitle">
-        Выберите сложность и игра начнется. Чем выше уровень - тем больше будет
-        выборка карт.
-      </p>
-      <ul class="header__list lvl-list">
-        <li class="lvl-list__item">
-          <a href="#" class="lvl-list__link first-lvl">Простой </a>
-        </li>
-        <li class="lvl-list__item">
-          <a href="#" class="lvl-list__link second-lvl">Средний </a>
-        </li>
-        <li class="lvl-list__item high">
-          <a href="#" class="lvl-list__link third-lvl">Сложный </a>
-        </li>
-      </ul>
-      <a scr="#" class="header-button button">Начать игру</a>
-      <img
-        src="img/Карта перевернутая.png"
-        alt="card-image"
-        class="header__img img-first"
-      />
-      <img
-        src="img/Карта перевернутая.png"
-        alt="card-image"
-        class="header__img img-second"
-      />
-    </header>
+    <div class="container">
+      <div class="start-menu">
+        <h1 class="start-menu__title">Выберите уровень сложности:</h1>
+        <p class="start-menu__subtitle">
+          Выберите сложность и игра начнется. Чем выше уровень - тем больше
+          будет выборка карт.
+        </p>
+        <ul class="start-menu__list lvl-list">
+          <li class="lvl-list__item">
+            <a href="#" class="lvl-list__link first-lvl">Простой </a>
+          </li>
+          <li class="lvl-list__item">
+            <a href="#" class="lvl-list__link second-lvl">Средний </a>
+          </li>
+          <li class="lvl-list__item high">
+            <a href="#" class="lvl-list__link third-lvl">Сложный </a>
+          </li>
+        </ul>
+        <a scr="#" class="container-button button">Начать игру</a>
+        <img
+          src="img/Карта перевернутая.png"
+          alt="card-image"
+          class="start-menu__img img-first"
+        />
+        <img
+          src="img/Карта перевернутая.png"
+          alt="card-image"
+          class="start-menu__img img-second"
+        />
+      </div>
+      <!-- /.start-menu -->
+    </div>
+    <!-- /.container -->
     <script src="js/main.js"></script>
   </body>
 </html>

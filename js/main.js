@@ -1,93 +1,54 @@
-const header = document.querySelector('.header');
+const container = document.querySelector('.container');
 const levelLinks = document.querySelectorAll('.lvl-list__link');
 const button = document.querySelector('.button');
-const wrap = document.querySelector('.wrap');
 
 const firstLvl = document.querySelector('.first-lvl');
 const secondLvl = document.querySelector('.second-lvl');
 const thirdLvl = document.querySelector('.third-lvl');
 
+const startMenu = document.querySelector('.start-menu');
+
+const createCard = () => {
+  const closedCard = document.createElement('div');
+  closedCard.classList.add('img-lvl1');
+  container.appendChild(closedCard);
+  container.classList.add('flex');
+  startMenu.style.display = 'none';
+};
+
 levelLinks.forEach((levelLink) => {
   levelLink.addEventListener('click', () => {
     if (levelLink === firstLvl) {
       button.addEventListener('click', () => {
-        document.body.classList.add('flex1');
-        header.style.display = 'none';
-        const closedCard1 = document.createElement('div');
-        closedCard1.classList.add('img-lvl1');
-        document.body.appendChild(closedCard1);
-        const closedCard2 = document.createElement('div');
-        closedCard2.classList.add('img-lvl1');
-        document.body.appendChild(closedCard2);
-        const closedCard3 = document.createElement('div');
-        closedCard3.classList.add('img-lvl1');
-        document.body.appendChild(closedCard3);
-
-        // closedCard1.addEventListener('click', () => {
-        //   closedCard1.
-        // })
+        createCard();
+        createCard();
+        createCard();
       });
     }
 
     if (levelLink === secondLvl) {
       button.addEventListener('click', () => {
-        document.body.classList.add('flex2');
-        header.style.display = 'none';
-        const closedCard1 = document.createElement('div');
-        closedCard1.classList.add('img-lvl2');
-        document.body.appendChild(closedCard1);
-        const closedCard2 = document.createElement('div');
-        closedCard2.classList.add('img-lvl2');
-        document.body.appendChild(closedCard2);
-        const closedCard3 = document.createElement('div');
-        closedCard3.classList.add('img-lvl2');
-        document.body.appendChild(closedCard3);
-        const closedCard4 = document.createElement('div');
-        closedCard4.classList.add('img-lvl2');
-        document.body.appendChild(closedCard4);
-        const closedCard5 = document.createElement('div');
-        closedCard5.classList.add('img-lvl2');
-        document.body.appendChild(closedCard5);
-        const closedCard6 = document.createElement('div');
-        closedCard6.classList.add('img-lvl2');
-        document.body.appendChild(closedCard6);
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
       });
     }
 
     if (levelLink === thirdLvl) {
       button.addEventListener('click', () => {
-        document.body.classList.add('flex3');
-        header.style.display = 'none';
-        const closedCard1 = document.createElement('div');
-        closedCard1.classList.add('img-lvl3');
-        document.body.appendChild(closedCard1);
-        const closedCard2 = document.createElement('div');
-        closedCard2.classList.add('img-lvl3');
-        document.body.appendChild(closedCard2);
-        const closedCard3 = document.createElement('div');
-        closedCard3.classList.add('img-lvl3');
-        document.body.appendChild(closedCard3);
-        const closedCard4 = document.createElement('div');
-        closedCard4.classList.add('img-lvl3');
-        document.body.appendChild(closedCard4);
-        const closedCard5 = document.createElement('div');
-        closedCard5.classList.add('img-lvl3');
-        document.body.appendChild(closedCard5);
-        const closedCard6 = document.createElement('div');
-        closedCard6.classList.add('img-lvl3');
-        document.body.appendChild(closedCard6);
-        const closedCard7 = document.createElement('div');
-        closedCard7.classList.add('img-lvl3');
-        document.body.appendChild(closedCard7);
-        const closedCard8 = document.createElement('div');
-        closedCard8.classList.add('img-lvl3');
-        document.body.appendChild(closedCard8);
-        const closedCard9 = document.createElement('div');
-        closedCard9.classList.add('img-lvl3');
-        document.body.appendChild(closedCard9);
-        const closedCard10 = document.createElement('div');
-        closedCard10.classList.add('img-lvl3');
-        document.body.appendChild(closedCard10);
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
+        createCard();
       });
     }
   });

@@ -1,5 +1,5 @@
 body {
-  background: url(/img/Background.jpg) no-repeat;
+  background: url(../img/Background.jpg) no-repeat, #198867;
   background-size: 100%;
   font-family: 'Roboto', sans-serif;
   color: #fff;
@@ -8,30 +8,11 @@ body {
   height: 865px;
 }
 
-/* .wrap {
-  width: 100%;
+.container {
   height: 100%;
-  display: flex;
-  flex-flow: column wrap-reverse;
-  align-items: center;
-  justify-content: center;
-} */
-
-.flex1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.flex2,
-.flex3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column wrap-reverse;
-}
-
-.header {
+.start-menu {
   position: relative;
   width: 833px;
   height: 394px;
@@ -40,15 +21,22 @@ body {
   margin-bottom: 112px;
 }
 
-.header__title {
+.start-menu__title {
   font-size: 54px;
   margin-bottom: 8px;
 }
 
-.header__subtitle {
+.start-menu__subtitle {
   font-size: 19px;
   margin-top: 0;
   margin-bottom: 60px;
+}
+
+.flex {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lvl-list {
