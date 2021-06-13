@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  flex-wrap: wrap;
   height: 100%;
 }
 
@@ -105,7 +106,7 @@ body {
 }
 
 .img-lvl1 {
-  background-image: url('/img/Карта\ перевернутая.png');
+  background-image: url('../img/Карта\ перевернутая.png');
   width: 218px;
   height: 341px;
   display: inline-block;
@@ -115,24 +116,8 @@ body {
 
 .img-lvl2,
 .img-lvl3 {
-  background-image: url('/img/Карта\ перевернутая.png');
+  background-image: url('../img/Карта\ перевернутая.png');
   width: 218px;
   height: 341px;
   margin-bottom: 24px;
-}
-
-.medium-lvl {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 13vw);
-  grid-template-rows: repeat(2, 20vw);
-  display: none;
-}
-
-.high-lvl {
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(5, 13vw);
-  grid-template-rows: repeat(2, 20vw);
-  display: none;
 }

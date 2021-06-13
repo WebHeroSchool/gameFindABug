@@ -20,35 +20,25 @@ levelLinks.forEach((levelLink) => {
   levelLink.addEventListener('click', () => {
     if (levelLink === firstLvl) {
       button.addEventListener('click', () => {
-        createCard();
-        createCard();
-        createCard();
+        for (i = 0; i < 3; i++) {
+          createCard();
+        }
       });
     }
 
     if (levelLink === secondLvl) {
       button.addEventListener('click', () => {
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
+        for (i = 0; i < 6; i++) {
+          createCard();
+        }
       });
     }
 
     if (levelLink === thirdLvl) {
       button.addEventListener('click', () => {
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
-        createCard();
+        for (i = 0; i < 10; i++) {
+          createCard();
+        }
       });
     }
   });
