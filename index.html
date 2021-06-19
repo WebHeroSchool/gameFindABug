@@ -4,44 +4,45 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Find the bug</title>
-    <link rel="stylesheet" href="fonts/Roboto-Bold.woff" />
+    <title>Find The Bug Game</title>
+    <link rel="stylesheet" href="fonts/fonts.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body class="body">
     <div class="container">
-      <div class="start-menu">
-        <h1 class="start-menu__title">Выберите уровень сложности:</h1>
-        <p class="start-menu__subtitle">
-          Выберите сложность и игра начнется. Чем выше уровень - тем больше
-          будет выборка карт.
-        </p>
-        <ul class="start-menu__list lvl-list">
-          <li class="lvl-list__item">
-            <a href="#" class="lvl-list__link first-lvl">Простой </a>
-          </li>
-          <li class="lvl-list__item">
-            <a href="#" class="lvl-list__link second-lvl">Средний </a>
-          </li>
-          <li class="lvl-list__item high">
-            <a href="#" class="lvl-list__link third-lvl">Сложный </a>
-          </li>
+      <h1 class="container__title">Выберите уровень сложности:</h1>
+      <p class="container__choice">
+        <span class="span">Выберите сложность и игра начнется.</span> Чем выше
+        уровень - тем больше будет выборка карт.
+      </p>
+      <div class="container__select select">
+        <ul class="select__list list">
+          <li class="list__level" id="simple">Простой</li>
+          <li class="list__level" id="medium">Средний</li>
+          <li class="list__level" id="hard">Сложный</li>
         </ul>
-        <a scr="#" class="container-button button">Начать игру</a>
-        <img
-          src="img/Карта перевернутая.png"
-          alt="card-image"
-          class="start-menu__img img-first"
-        />
-        <img
-          src="img/Карта перевернутая.png"
-          alt="card-image"
-          class="start-menu__img img-second"
-        />
       </div>
-      <!-- /.start-menu -->
+      <div class="container__cards-block">
+        <button class="container__button start">Начать игру</button>
+        <div class="container__cards cards">
+          <div class="cards__left">
+            <img
+              src="img/card_cover.png"
+              alt="card-image"
+              class="cards__img-left"
+            />
+          </div>
+          <div class="cards__right">
+            <img
+              src="img/card_cover.png"
+              alt="card-image"
+              class="cards__img-right"
+            />
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.container -->
-    <script src="js/main.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

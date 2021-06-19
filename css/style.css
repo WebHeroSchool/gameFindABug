@@ -1,123 +1,152 @@
-body {
-  background: url(../img/Background.jpg) no-repeat, #198867;
-  background-size: 100%;
+.body {
+  background: url(../img/Background.jpg) no-repeat,
+    linear-gradient(45deg, rgb(62, 137, 111), rgb(43, 158, 124));
+  background-size: 100vw 100vh;
   font-family: 'Roboto', sans-serif;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  height: 865px;
 }
 
 .container {
-  flex-wrap: wrap;
-  height: 100%;
+  width: 80vw;
+  margin: auto;
 }
 
-.start-menu {
-  position: relative;
-  width: 833px;
-  height: 394px;
-  left: 103px;
-  top: 65px;
-  margin-bottom: 112px;
+.container__title {
+  font-size: 4vw;
+  margin-top: 6vh;
+  margin-bottom: 1vh;
 }
 
-.start-menu__title {
-  font-size: 54px;
-  margin-bottom: 8px;
+.container__choice {
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 1.3vw;
+  margin-bottom: 8vh;
 }
 
-.start-menu__subtitle {
-  font-size: 19px;
-  margin-top: 0;
-  margin-bottom: 60px;
-}
-
-.flex {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lvl-list {
-  list-style: none;
-  margin: 0;
-}
-
-.lvl-list__item {
-  margin-bottom: 24px;
-}
-
-.rectangle:before,
-.rectangle {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 0;
-  top: 168px;
-  background: #d62b2e;
-  transform: rotate(45deg);
-}
-
-.lvl-list__item_high {
-  margin-bottom: 112px;
-}
-
-.lvl-list__link {
-  text-decoration: none;
-  color: #fff;
-  font-size: 45px;
+.span {
   font-family: 'Roboto', sans-serif;
-  font-weight: bold;
 }
 
-.button {
-  cursor: pointer;
-  display: flex;
-  width: 352px;
-  height: 95px;
-  margin-top: 112px;
-  background: #d62b2e;
-  border-radius: 7px;
-  font-size: 32px;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
+.list {
+  list-style: none;
 }
 
-.img {
-  width: 218px;
-  height: 341px;
+.list__level {
+  font-size: 4vw;
+  width: fit-content;
+  margin-bottom: 2vh;
 }
 
-.img-first {
-  position: absolute;
-  left: 1050px;
-  top: 270px;
-  transform: rotate(12deg);
-}
-
-.img-second {
-  position: absolute;
-  left: 1235px;
-  top: 285px;
-  transform: rotate(40deg);
-}
-
-.img-lvl1 {
-  background-image: url('../img/Карта\ перевернутая.png');
-  width: 218px;
-  height: 341px;
+.list li:hover::before {
+  content: '';
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 24px;
+  width: 22px;
+  height: 22px;
+  background: url('../img/rectangle.png');
+  background-size: 22px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.img-lvl2,
-.img-lvl3 {
-  background-image: url('../img/Карта\ перевернутая.png');
-  width: 218px;
-  height: 341px;
-  margin-bottom: 24px;
+.clickToList::before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-image: url('../img/rectangle.png');
+  background-size: 22px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.start {
+  cursor: pointer;
+  width: 10em;
+  height: 2.5em;
+  margin-top: 8vh;
+  background: #d62b2e;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 2.5vw;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+}
+
+.start:hover {
+  box-shadow: 8px 8px 11px 5px #383333;
+  transition: transform 0.2s, box-shadow 0.2s;
+  transform: translateY(-7px);
+}
+
+.container__cards-block {
+  width: 93%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards {
+  display: flex;
+}
+
+.cards__img-left {
+  transform: rotate(10deg);
+}
+
+.cards__img-right {
+  transform: translate(-42px, 20px) rotate(40deg);
+  right: 30px;
+}
+
+.cards__right,
+.cards__left {
+  width: 13vw;
+}
+
+.cards__img-right,
+.cards__img-left {
+  width: 100%;
+}
+
+@media (min-width: 585px) and (max-width: 768px) {
+  .start:hover {
+    box-shadow: 6px 6px 9px 4px #383333;
+  }
+  .list li:hover::before {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+  }
+  .clickToList::before {
+    width: 18px;
+    height: 18px;
+    background-size: 18px;
+  }
+}
+
+@media (max-width: 584px) {
+  .start:hover {
+    box-shadow: 4px 4px 7px 2px #383333;
+  }
+  .list li:hover::before {
+    width: 14px;
+    height: 14px;
+    background-size: 14px;
+    margin-right: 5px;
+  }
+  .clickToList::before {
+    width: 14px;
+    height: 14px;
+    background-size: 14px;
+    margin-right: 5px;
+  }
 }
