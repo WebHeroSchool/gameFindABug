@@ -47,7 +47,7 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url('../img/rectangle.png');
+  background: url('../img/Rectangle.png');
   background-size: 30px;
   margin-right: 10px;
   margin-bottom: 5px;
@@ -59,7 +59,7 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url('../img/rectangle.png');
+  background-image: url('../img/Rectangle.png');
   background-size: 30px;
   margin-right: 10px;
   margin-bottom: 5px;
