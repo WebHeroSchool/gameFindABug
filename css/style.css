@@ -45,22 +45,24 @@
 .list li:hover::before {
   content: '';
   display: inline-block;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   background: url('../img/rectangle.png');
-  background-size: 22px;
+  background-size: 30px;
   margin-right: 10px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 
 .clickToList::before {
   content: '';
   display: inline-block;
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   background-image: url('../img/rectangle.png');
-  background-size: 22px;
+  background-size: 30px;
   margin-right: 10px;
+  margin-bottom: 5px;
   cursor: pointer;
 }
 
@@ -117,6 +119,35 @@
   width: 100%;
 }
 
+@media (min-width: 1024px) and (max-width: 1156px) {
+  .list li:hover::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    margin-bottom: 2px;
+  }
+  .clickToList::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    margin-bottom: 2px;
+  }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+  .list li:hover::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    margin-bottom: 0;
+  }
+  .clickToList::before {
+    width: 24px;
+    height: 24px;
+    background-size: 24px;
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 585px) and (max-width: 768px) {
   .start:hover {
     box-shadow: 6px 6px 9px 4px #383333;
@@ -125,11 +156,13 @@
     width: 18px;
     height: 18px;
     background-size: 18px;
+    margin-bottom: 0;
   }
   .clickToList::before {
     width: 18px;
     height: 18px;
     background-size: 18px;
+    margin-bottom: 0;
   }
 }
 
@@ -142,11 +175,13 @@
     height: 14px;
     background-size: 14px;
     margin-right: 5px;
+    margin-bottom: 0;
   }
   .clickToList::before {
     width: 14px;
     height: 14px;
     background-size: 14px;
     margin-right: 5px;
+    margin-bottom: 0;
   }
 }

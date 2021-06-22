@@ -1,8 +1,7 @@
 const table = document.querySelector('#table');
 const level = localStorage.getItem('level');
-console.log('level: ', level);
 
-const isCard = false;
+let isCard = false;
 
 const levels = new Map();
 levels.set('simple', 3);
@@ -48,18 +47,22 @@ const createCards = (isBug) => {
   inner.onmouseover = () => back.classList.add('card__hover');
   inner.onmouseout = () => back.classList.remove('card__hover');
 
-  card.addEventListener('click', () => {
+    card.addEventListener('click', () => {
+      turnCard(backToStart)
+    });
+  
+  function turnCard(func) {
     if (!isCard) {
       inner.classList.add('reverse');
       isCard = true;
     }
-  });
+    func();
+  }
 
-  imgFront.addEventListener(
-    'click',
-    () => (document.location = './index.html')
-  );
-};
+  function backToStart() {
+    card.addEventListener('click', () => document.location = './index.html')
+  }
+}
 
 const cardCount = levels.get(level);
 const bugCardIndex = Math.floor(Math.random() * cardCount);

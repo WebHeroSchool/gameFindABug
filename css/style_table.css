@@ -61,6 +61,10 @@
   transform: rotateY(180deg);
 }
 
+.reverse:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 862px) and (max-width: 1024px) {
   .table {
     width: 50vw;
