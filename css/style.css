@@ -44,31 +44,13 @@
   cursor: pointer;
 }
 
-/* .list__level:hover:before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url('../img/Rectangle.png');
-  background-size: 30px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  cursor: pointer;
-  opacity: 1;
+.list__level .rect {
   transition: opacity 0.2s;
-} */
+}
 
-/* .clickToList::before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  background-image: url('../img/Rectangle.png');
-  background-size: 30px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  cursor: pointer;
-} */
+.list__level:hover .rect {
+  opacity: 1;
+}
 
 .rect {
   display: inline-block;
@@ -81,11 +63,7 @@
   opacity: 0;
 }
 
-.opacity {
-  opacity: 1;
-}
-
-.clickToList {
+.clickToList .rect {
   opacity: 1;
 }
 
@@ -142,34 +120,7 @@
   width: 100%;
 }
 
-@media (min-width: 1024px) and (max-width: 1156px) {
-  .list li:hover::before {
-    width: 24px;
-    height: 24px;
-    background-size: 24px;
-    margin-bottom: 2px;
-  }
-  .clickToList::before {
-    width: 24px;
-    height: 24px;
-    background-size: 24px;
-    margin-bottom: 2px;
-  }
-}
-
 @media (min-width: 767px) and (max-width: 1023px) {
-  .list li:hover::before {
-    width: 24px;
-    height: 24px;
-    background-size: 24px;
-    margin-bottom: 0;
-  }
-  .clickToList::before {
-    width: 24px;
-    height: 24px;
-    background-size: 24px;
-    margin-bottom: 0;
-  }
   .list {
     padding-left: 20px;
   }
@@ -201,18 +152,6 @@
   .list__level {
     margin-bottom: 1vh;
   }
-  /* .list li:hover::before {
-    width: 18px;
-    height: 18px;
-    background-size: 18px;
-    margin-bottom: 0;
-  } */
-  /* .clickToList::before {
-    width: 18px;
-    height: 18px;
-    background-size: 18px;
-    margin-bottom: 0;
-  } */
   .rect {
     width: 20px;
     height: 20px;
