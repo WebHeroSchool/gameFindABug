@@ -47,15 +47,15 @@ const createCards = (isBug) => {
   inner.onmouseover = () => back.classList.add('card__hover');
   inner.onmouseout = () => back.classList.remove('card__hover');
 
-    card.addEventListener('click', () => {
-      if (!isCard) {
+  card.addEventListener('click', () => {
+    if (!isCard) {
       inner.classList.add('reverse');
       isCard = true;
-      } else {
-        document.location = './index.html'
-      }
-    });
-}
+    } else {
+      document.location = './index.html';
+    }
+  });
+};
 const cardCount = levels.get(level);
 const bugCardIndex = Math.floor(Math.random() * cardCount);
 
