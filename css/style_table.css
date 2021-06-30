@@ -17,6 +17,8 @@
   cursor: pointer;
   transform: translateY(-8px);
   transition: transform 0.2s;
+  background: url('../img/Background.jpg');
+  border-radius: 10px;
 }
 
 .table__hard {
@@ -103,14 +105,14 @@
     max-width: 19vw;
   }
   .table__hard {
-    width: 74vw;
+    width: 90vw;
   }
   .card-inner__hard {
-    max-width: 13vw;
+    max-width: 15vw;
   }
 }
 
-@media (max-width: 584px) {
+@media (min-width: 375px) and (max-width: 584px) {
   .table {
     width: 80vw;
   }
@@ -118,9 +120,24 @@
     max-width: 23vw;
   }
   .table__hard {
-    width: 82vw;
+    width: 100vw;
   }
   .card-inner__hard {
-    max-width: 13vw;
+    max-width: 17vw;
+  }
+}
+
+@media (max-width: 374px) {
+  .table {
+    width: 80vw;
+  }
+  .card-inner {
+    max-width: 23vw;
+  }
+  .table__hard {
+    width: 100vw;
+  }
+  .card-inner__hard {
+    max-width: 16vw;
   }
 }

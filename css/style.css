@@ -38,33 +38,36 @@
 }
 
 .list__level {
+  display: flex;
+  align-items: center;
+  position: relative;
   font-size: 4vw;
   width: fit-content;
   margin-bottom: 2vh;
   cursor: pointer;
+  padding-left: 1em;
 }
 
-.list__level .rect {
-  transition: opacity 0.2s;
-}
-
-.list__level:hover .rect {
-  opacity: 1;
-}
-
-.rect {
+.list__level:hover::before {
+  content: '';
+  position: absolute;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   background: url('../img/Rectangle.png');
-  background-size: 30px;
-  margin-right: 10px;
-  margin-bottom: 3px;
-  opacity: 0;
+  background-size: 28px;
+  left: 0;
 }
 
-.clickToList .rect {
-  opacity: 1;
+.clickToList::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background: url('../img/Rectangle.png');
+  background-size: 28px;
+  left: 0;
 }
 
 .start {
@@ -121,115 +124,144 @@
 }
 
 @media (min-width: 767px) and (max-width: 1023px) {
-  .list {
-    padding-left: 20px;
+  .container__title {
+    font-size: 5vw;
   }
-  .rect {
-    width: 22px;
-    height: 22px;
-    background-size: 22px;
-    margin-right: 7px;
-    margin-bottom: 0px;
+  .container__choice {
+    margin-bottom: 7vh;
+    font-size: 2vw;
+  }
+  .list__level {
+    font-size: 5.5vw;
+  }
+  .list__level:hover::before {
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+  }
+  .clickToList::before {
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
   }
 }
 @media (min-width: 585px) and (max-width: 768px) {
+  .container__title {
+    font-size: 5vw;
+  }
   .container__choice {
-    margin-bottom: 5vh;
+    margin-bottom: 10vh;
+    font-size: 2.5vw;
   }
   .start {
-    margin-top: 4vh;
+    width: 10em;
+    height: 2.5em;
+    margin-top: 8vh;
+    font-size: 3.2vw;
   }
   .start:hover {
     box-shadow: 6px 6px 9px 4px #383333;
   }
-  .cards__img-right,
-  .cards__img-left {
-    width: 80%;
-  }
-  .list {
-    padding-left: 10px;
-  }
   .list__level {
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
+    font-size: 5.6vw;
   }
-  .rect {
-    width: 20px;
-    height: 20px;
-    background-size: 20px;
-    margin-right: 7px;
-    margin-bottom: 0px;
+  .list__level:hover::before {
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
+  }
+  .clickToList::before {
+    width: 25px;
+    height: 25px;
+    background-size: 25px;
   }
 }
 
 @media (min-width: 375px) and (max-width: 584px) {
   .container {
-    height: 100vh;
+    height: 90vh;
+  }
+  .container__title {
+    font-size: 5.5vw;
+    margin-top: 3vh;
   }
   .container__choice {
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
+    font-size: 3vw;
   }
   .start {
-    margin-top: 3vh;
+    width: 10em;
+    height: 2.5em;
+    margin-top: 4vh;
+    font-size: 3.2vw;
   }
   .start:hover {
     box-shadow: 4px 4px 7px 2px #383333;
   }
-  .cards__img-right,
-  .cards__img-left {
-    width: 70%;
-  }
   .cards__img-right {
     transform: translate(-30px, 10px) rotate(40deg);
   }
-  .list {
-    padding-left: 5px;
-  }
   .list__level {
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
+    font-size: 6vw;
+    padding-left: 1.1em;
   }
-  .rect {
-    width: 15px;
-    height: 15px;
-    background-size: 15px;
-    margin-right: 7px;
-    margin-bottom: 0px;
+  .list__level:hover::before {
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
+  }
+  .clickToList::before {
+    width: 22px;
+    height: 22px;
+    background-size: 22px;
+  }
+  .container__cards-block {
+    width: 100%;
   }
 }
 
 @media (max-width: 374px) {
   .container {
-    height: 100vh;
+    height: 90vh;
+  }
+  .container__title {
+    font-size: 5.5vw;
+    margin-top: 2vh;
   }
   .container__choice {
-    margin-bottom: 3vh;
-  }
-  .container__cards-block {
-    width: 90%;
+    margin-bottom: 6vh;
+    font-size: 5vw;
   }
   .start {
-    margin-top: 2vh;
+    width: 12em;
+    height: 2.6em;
+    margin-top: 4vh;
+    font-size: 3.2vw;
   }
   .start:hover {
     box-shadow: 4px 4px 7px 2px #383333;
   }
-  .cards__img-right,
-  .cards__img-left {
-    width: 60%;
-  }
   .cards__img-right {
     transform: translate(-30px, 10px) rotate(40deg);
   }
-  .list {
-    padding-left: 5px;
-  }
   .list__level {
-    margin-bottom: 1vh;
+    margin-bottom: 3vh;
+    font-size: 6vw;
+    padding-left: 1.6em;
   }
-  .rect {
-    width: 10px;
-    height: 10px;
-    background-size: 10px;
-    margin-right: 7px;
-    margin-bottom: 0px;
+  .list__level:hover::before {
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+  }
+  .clickToList::before {
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+  }
+  .container__cards-block {
+    width: 100%;
   }
 }

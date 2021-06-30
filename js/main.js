@@ -11,12 +11,10 @@ for (i = 0; i < listLevels.length; i++) {
 const chooseLevelById = (ids) => {
   ids.forEach((id) => {
     let level = document.getElementById(id);
-    level.addEventListener('click', (e) => {
-      const target = e.target;
-      listLevels.forEach((item) => {
-        item.classList.remove('clickToList');
-      });
-      target.classList.add('clickToList');
+    level.addEventListener('click', () => {
+      const clickToList = document.querySelectorAll('.clickToList');
+      clickToList.forEach((item) => item.classList.remove('clickToList'));
+      level.classList.add('clickToList');
       button.onclick = () => {
         document.location = `./table.html`;
         localStorage.setItem('level', id);
